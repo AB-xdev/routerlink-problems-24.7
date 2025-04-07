@@ -88,8 +88,7 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <!-- Replace artifactId with vaadin-core to use only free components -->
-            <artifactId>vaadin</artifactId>
+            <artifactId>vaadin-core</artifactId>
             <!-- Remove the following exclussion if you want to enable Hilla -->
             <exclusions>
                 <exclusion>
@@ -161,6 +160,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <reactEnable>false</reactEnable>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -197,6 +199,9 @@
                                 <phase>compile</phase>
                             </execution>
                         </executions>
+                        <configuration>
+                            <reactEnable>false</reactEnable>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
